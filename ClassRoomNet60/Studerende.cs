@@ -66,6 +66,40 @@ namespace ClassRoomNet60
             return null;
         }
 
+        public void Årstidf(Klasserum klasserum)
+        {
+            int forår = 0;
+            int sommer = 0;
+            int efterår = 0;
+            int vinter = 0;
+
+            foreach (var k in klasserum.Klasseliste)
+            {
+                int fødselsmåned = k.FødselsMåned;
+                if (fødselsmåned == 12 || fødselsmåned == 1 || fødselsmåned == 2)
+                {
+                    vinter++;
+                }
+
+                if (fødselsmåned == 3 || fødselsmåned == 4 || fødselsmåned == 5)
+                {
+                    forår++;
+                }
+
+                if (fødselsmåned == 6 || fødselsmåned == 7 || fødselsmåned == 8)
+                {
+                    sommer++;
+                }
+
+                if (fødselsmåned == 9 || fødselsmåned == 10 || fødselsmåned == 11)
+                {
+                    efterår++;
+                }
+            }
+            Console.WriteLine($"Vinter: {vinter}\n Forår: {forår}\n Sommer: {sommer}\n Efterår: {efterår}");
+            
+        }
+
         public override string ToString()
         {
             return $"Navn = {_navn}, FødselsMåned = {_fødselsmåned}, Fødselsdag = {_fødselsdag}";

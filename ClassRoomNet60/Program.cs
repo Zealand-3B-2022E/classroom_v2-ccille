@@ -22,6 +22,7 @@ Klasserum kl = new Klasserum("3B", list, DateTime.Parse("1-9-2022"));
 Studerende stud = new Studerende();
 Console.WriteLine(stud.Årstid(kl.Klasseliste.Find(k => k.Navn == "Cecilie").FødselsMåned));
 
+stud.Årstidf(kl);
 
 Console.WriteLine(stud.Årstid(kl.Klasseliste.Find(k => k.Navn == "Marcus").FødselsMåned)); 
 
