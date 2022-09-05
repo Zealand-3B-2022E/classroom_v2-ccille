@@ -35,6 +35,14 @@ namespace ClassRoomNet60
             
         }
 
+        public Klasserum(string klassenavn, List<Studerende> klasseliste, DateTime semesterstart)
+        {
+            Klassenavn = klassenavn;
+            Klasseliste = klasseliste;
+            Semesterstart = semesterstart;
+
+        }
+
         public override string ToString()
         {
             return $"Klassenavn = {_klassenavn}, Klasselist = {_klasseliste}, Semesterstart = {_semesterstart}";
