@@ -37,6 +37,35 @@ namespace ClassRoomNet60
             _fødselsdag = fødselsdag;
         }
 
+        public Studerende()
+        {
+
+        }
+        
+        public string Årstid(int fødselsmåned)
+        {
+            if (fødselsmåned == 12 || fødselsmåned == 1 || fødselsmåned == 2)
+            {
+                return "vinter";
+            }
+
+            if (fødselsmåned == 3 || fødselsmåned == 4 || fødselsmåned == 5)
+            {
+                return "forår";
+            }
+
+            if (fødselsmåned == 6 || fødselsmåned == 7 || fødselsmåned == 8)
+            {
+                return "sommer";
+            }
+
+            if (fødselsmåned == 9 || fødselsmåned == 10 || fødselsmåned == 11)
+            {
+                return "efterår";
+            }
+            return null;
+        }
+
         public override string ToString()
         {
             return $"Navn = {_navn}, FødselsMåned = {_fødselsmåned}, Fødselsdag = {_fødselsdag}";
