@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassRoomNet60
 {
-    internal class Klasserum
+    public class Klasserum
     {
         private string _klassenavn;
         private List<Studerende> _klasseliste;
